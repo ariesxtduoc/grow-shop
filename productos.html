@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product img {
+            width: 200px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .product-details {
+            flex: 1;
+        }
+        .product h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .product p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .product button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #45a049;
+        }
+
+        .carrito {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 90%;
+        }
+        .large-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .small-img {
+            max-width: 70px; /* Puedes ajustar este valor según tu preferencia */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cactus Shop</h1>
+        <div class="carrito">
+            <a href="carrito.html"><img src="image/carrito.jpg" alt="large-img" class="small-img"></a>
+        </div>
+        <div class="product">
+            <img src="cactus1.jpg" alt="Cactus">
+            <div class="product-details">
+                <h2>Cactus Plant</h2>
+                <p>Description: Beautiful green cactus plant. Perfect for decorating your home or office.</p>
+                <p>Price: $10</p>
+                <button onclick="addToCart('Cactus Plant', 10)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="cactus2.jpg" alt="Cactus">
+            <div class="product-details">
+                <h2>Succulent Plant</h2>
+                <p>Description: Lovely succulent plant in a decorative pot. Adds a touch of nature to any space.</p>
+                <p>Price: $8</p>
+                <button onclick="addToCart('Succulent Plant', 8)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Add more products here -->
+    </div>
+
+    <script>
+        function addToCart(productName, price) {
+            // Aquí puedes implementar la lógica para agregar el producto al carrito de compras
+            alert("Product added to cart: " + productName + " - Price: $" + price);
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
