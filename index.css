@@ -1,5 +1,4 @@
 body {
-    background-color: #f0f0f0; /* Fondo gris claro */
     font-family: Arial, sans-serif;
 }
 
@@ -68,7 +67,7 @@ main {
 }
 
 footer {
-    background-color: #3498db; /* Pie de página azul */
+    background-color: #000000; /* Pie de página azul */
     color: #fff; /* Texto blanco */
     text-align: center;
     padding: 10px;
@@ -77,6 +76,7 @@ footer {
 #divcard{
     display: inline-block;
     margin-left: 8%;
+    margin-left: 800px;
 }
 
 
@@ -87,6 +87,29 @@ footer {
 }
 
 #noticias{
+    display: inline-block;
+    margin-left: 9%;
+}
+
+#container{
+    display: inline-block;
+    margin-left: 9%;
+}
+
+body {
+    background-color: darkgrey;
+  }
+
+  .large-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  #container{
     display: inline-block;
     margin-left: 9%;
 }
