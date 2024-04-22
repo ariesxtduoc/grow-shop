@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
 }
 .container {
     max-width: 1200px;
@@ -11,7 +10,7 @@ body {
 }
 h1 {
     text-align: center;
-    color: #333;
+    color:white;
 }
 .product {
     background-color: #fff;
@@ -64,4 +63,8 @@ h1 {
 .small-img {
     max-width: 70px; /* Puedes ajustar este valor según tu preferencia */
     height: auto;
+}
+
+.imgstandar{
+    height: 200px;
 }
