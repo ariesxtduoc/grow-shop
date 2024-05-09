@@ -27,41 +27,74 @@
             </section>
 
                 <!-- Agrega más elementos de la lista según los productos comprados -->
-                <form>
+                <form id="compraForm" action="confirmacompra.html" method="get">
                     <div class="mb-3">
-                      <label for="idemail" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      
+                        <label for="idemail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="idnombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" name="nom" id="idnombre" required minlength="2" />
                         <div class="invalid-feedback">Al menos 2 caracteres</div>
-    
                     </div>
                     <div class="mb-3">
                         <label for="idapellido" class="form-label">Apellido</label>
                         <input type="text" class="form-control" name="ape" id="idapellido" required minlength="2" />
                         <div class="invalid-feedback">Al menos 2 caracteres</div>
-    
                     </div>
                     <div class="mb-3">
                         <label for="idrut" class="form-label">Rut</label>
                         <input type="text" class="form-control" name="rut" id="idrut" required maxlength="10" minlength="9" />
                         <div class="invalid-feedback">Ej.:12345678-9</div>
-    
                     </div>
-
+                
                     <div class="mb-3">
                         <label for="iddireccion" class="form-label">Direccion</label>
                         <input type="text" class="form-control" name="direccion" id="direccion" required minlength="2">
                         <div class="invalid-feedback">Ingrese direccion valida</div>
                     </div>
-
-                    <a href="index.html" class="btn btn-primary" type="button"> Home</a>
-                    <a href="confirmacompra.html" class="btn btn-secondary" type="button">Confirma Compra </a>
-                    
-             
+                
+                    <a href="index.html" class="btn btn-primary" type="button">Home</a>
+                    <button class="btn btn-secondary" type="button" onclick="confirmarCompra()">Confirma Compra</button>
+                </form>
+                
+                <script>
+                    function confirmarCompra() {
+                        // Obtener los valores de los campos del formulario
+                        var email = document.getElementById('exampleInputEmail1').value;
+                        var nombre = document.getElementById('idnombre').value;
+                        var apellido = document.getElementById('idapellido').value;
+                        var rut = document.getElementById('idrut').value;
+                        var direccion = document.getElementById('direccion').value;
+                
+                        // Validar campos
+                        if (!email || !nombre || !apellido || !rut || !direccion) {
+                            alert('Por favor, complete todos los campos.');
+                            return;
+                        }
+                
+                        // Validar formato de email
+                        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(email)) {
+                            alert('Por favor, ingrese un correo electrónico válido.');
+                            return;
+                        }
+                
+                        // Validar longitud del rut
+                        if (rut.length < 9 || rut.length > 10) {
+                            alert('El rut debe tener entre 9 y 10 caracteres.');
+                            return;
+                        }
+                
+                        // Validar formato de rut
+                        // Implementa aquí tu lógica de validación de rut
+                
+                        // Validación exitosa, proceder con la compra
+                        document.getElementById('compraForm').submit();
+                    }
+                </script>
+                
+                
             
         </section>
     </main>
