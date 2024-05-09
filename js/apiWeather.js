@@ -15,4 +15,3 @@ const a = fetch(queryURL)
     weatherInfo.innerHTML = `<p>Error al obtener el clima. Por favor, intente de nuevo más tarde.</p>`;
 });
 
-document.getElementById("climaConce").innerHTML = a
